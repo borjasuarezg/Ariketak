@@ -1,0 +1,495 @@
+:root {
+    --blue: #075aa6;
+    --light-blue: #eaf5fc;
+    --red: #e30613;
+    --yellow: #f5bd18;
+
+    --dark: #202832;
+    --text: #252525;
+    --gray: #68737d;
+    --line: #d9dfe4;
+    --white: #ffffff;
+    --background: #f2f3f4;
+
+    --radius: 0.4rem;
+
+    --small: 0.75rem;
+    --normal: 0.9rem;
+    --large: 1.15rem;
+
+    --space-small: 0.5rem;
+    --space: 1rem;
+    --space-large: 1.5rem;
+}
+
+
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: var(--normal);
+    line-height: 1.5;
+
+    color: var(--text);
+    background-color: var(--background);
+
+    background-image:
+        linear-gradient(
+            rgba(242, 243, 244, 0.96),
+            rgba(242, 243, 244, 0.96)
+        ),
+        url("platos-doraemon-fiesta.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* CABECERA */
+
+.header {
+    width: min(94%, 1150px);
+    margin: var(--space-large) auto 0;
+    padding: var(--space-large);
+
+    color: var(--white);
+
+    background: linear-gradient(120deg, var(--blue), #00a0e9);
+
+    border-radius: var(--radius);
+}
+
+.header > div:first-child {
+    flex: 1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--space-large);
+    flex-wrap: wrap;
+}
+
+.small-title {
+    display: block;
+    margin-bottom: var(--space-small);
+
+    font-size: var(--small);
+    font-weight: bold;
+    letter-spacing: 0.08rem;
+}
+
+.header h1 {
+    font-size: 2.4rem;
+    line-height: 1;
+}
+
+.header p {
+    margin-top: var(--space-small);
+}
+
+.header-info {
+    display: flex;
+    gap: var(--space-large);
+    flex-wrap: wrap;
+
+    font-size: var(--small);
+}
+
+
+/* ESTRUCTURA PRINCIPAL */
+
+.cv {
+    width: min(94%, 1150px);
+    margin: var(--space-large) auto;
+
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: var(--space-large);
+
+    min-height: calc(100vh - 190px);
+}
+
+
+/* COLUMNA IZQUIERDA */
+
+.sidebar {
+    padding: var(--space-large);
+
+    color: var(--white);
+    background-color: var(--dark);
+
+    border-radius: var(--radius);
+}
+
+.sidebar section {
+    margin-top: var(--space-large);
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+}
+
+.photo img {
+    width: 115px;
+    height: 115px;
+
+    object-fit: cover;
+
+    background-color: var(--white);
+
+    border: 4px solid var(--yellow);
+    border-radius: 50%;
+}
+
+.sidebar h2 {
+    margin-bottom: var(--space-small);
+    padding-bottom: 0.25rem;
+
+    color: #4db9ed;
+
+    font-size: var(--small);
+
+    border-bottom: 1px solid #4db9ed;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: var(--space-small);
+
+    font-size: var(--small);
+}
+
+.sidebar li strong {
+    display: block;
+
+    color: #aeb8c1;
+
+    font-size: 0.65rem;
+}
+
+
+/* GAITASUNAK */
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0.35rem 0;
+
+    font-size: var(--small);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill b {
+    color: var(--yellow);
+}
+
+
+/* ETIKETAK */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-small);
+}
+
+.tags span {
+    padding: 0.3rem 0.45rem;
+
+    color: #dff5ff;
+
+    background-color: rgba(0, 160, 233, 0.15);
+
+    border-radius: 0.25rem;
+
+    font-size: 0.68rem;
+}
+
+
+/* ESALDIA */
+
+.quote {
+    margin-top: var(--space-large);
+    padding-top: var(--space);
+
+    color: #d5dbe0;
+
+    font-size: var(--small);
+    font-style: italic;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.quote span {
+    display: block;
+
+    margin-top: 0.25rem;
+
+    color: var(--yellow);
+
+    text-align: right;
+}
+
+
+/* EDUKI NAGUSIA */
+
+.content {
+    min-width: 0;
+}
+
+.content section {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    margin-bottom: var(--space);
+
+    padding-bottom: 0.3rem;
+
+    font-size: var(--large);
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+/* PROFILA */
+
+.profile {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+
+    gap: 2rem;
+}
+
+.profile h3 {
+    color: var(--blue);
+
+    font-size: 1.35rem;
+    line-height: 1.25;
+}
+
+.profile p {
+    color: var(--gray);
+}
+
+
+/* ESPERIENTZIA */
+
+.experience {
+    margin-bottom: var(--space-large);
+    padding-left: var(--space);
+
+    border-left: 2px solid var(--line);
+}
+
+.experience-title {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space);
+
+    flex-wrap: wrap;
+}
+
+.experience h3 {
+    font-size: var(--normal);
+}
+
+.experience-title span,
+.experience-title strong {
+    color: var(--gray);
+
+    font-size: var(--small);
+}
+
+.experience ul {
+    margin-top: var(--space-small);
+    padding-left: 1.1rem;
+
+    color: var(--gray);
+
+    font-size: var(--small);
+}
+
+
+/* FORMAKUNTZA */
+
+.training {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: var(--space-small);
+}
+
+.card {
+    padding: var(--space);
+
+    background-color: var(--white);
+
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.card > span {
+    color: var(--blue);
+
+    font-size: var(--small);
+    font-weight: bold;
+}
+
+.card h3 {
+    margin: 0.3rem 0;
+
+    font-size: var(--normal);
+}
+
+.card strong {
+    color: var(--blue);
+
+    font-size: 0.7rem;
+}
+
+.card p {
+    margin-top: var(--space-small);
+
+    color: var(--gray);
+
+    font-size: 0.7rem;
+}
+
+
+/* LORPENAK */
+
+.achievements {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 2rem;
+}
+
+.achievements ul {
+    padding-left: 1.1rem;
+
+    color: var(--gray);
+
+    font-size: var(--small);
+}
+
+.inventions {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    gap: var(--space-small);
+}
+
+.inventions span {
+    padding: 0.35rem 0.5rem;
+
+    color: var(--blue);
+    background-color: var(--light-blue);
+
+    border-radius: 0.25rem;
+
+    font-size: var(--small);
+}
+
+
+/* TAULA */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: var(--small);
+}
+
+th,
+td {
+    padding: 0.6rem 0.7rem;
+
+    text-align: left;
+
+    border-bottom: 1px solid var(--line);
+}
+
+th {
+    font-size: 0.7rem;
+}
+
+.win {
+    color: #078b5c;
+    font-weight: bold;
+}
+
+
+/* FOOTER */
+
+footer {
+    width: min(94%, 1150px);
+
+    margin: 0 auto 1.5rem;
+
+    color: var(--gray);
+
+    text-align: center;
+
+    font-size: 0.7rem;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .cv {
+        grid-template-columns: 1fr;
+    }
+
+    .training {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header-info {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .profile,
+    .achievements {
+        grid-template-columns: 1fr;
+    }
+
+    .training {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-title {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+}

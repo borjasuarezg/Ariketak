@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordle JS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="container">
+    <h1>Wordle</h1>
+
+    <!-- Konfigurazio inprimakia -->
+    <form id="konfig-inprimakia" class="card">
+      <div class="form-group">
+        <label for="saiakerak">Saiakerak (1-10):</label>
+        <input type="number" id="saiakerak" min="1" max="10" value="6" required>
+      </div>
+
+      <div class="form-group">
+        <label for="luzera">Hitzaren luzera (3-8):</label>
+        <input type="number" id="luzera" min="3" max="8" value="5" required>
+      </div>
+
+      <button type="submit" class="btn">Jolastu</button>
+    </form>
+
+    <!-- Joko eremua -->
+    <div id="joko-eremua" class="hidden">
+      <div id="taula"></div>
+      <div id="teklatua"></div>
+    </div>
+
+    <!-- Partiden historia -->
+    <div id="historia-eremua" class="card hidden">
+      <h2>Partiden Historia</h2>
+      <ul id="historia-zerrenda"></ul>
+      <button id="btn-berriro-jolastu" class="btn">Berriro jolastu</button>
+    </div>
+  </main>
+
+  <script src="code.js"></script>
+</body>
+</html>
